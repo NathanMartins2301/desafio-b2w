@@ -11,7 +11,11 @@ module.exports = new class PlanetaRepository {
         return Planeta.findById(id);
     }
 
+    getByNome(nomeReq){
+        return Planeta.findOne({nome : nomeReq});
+    }
     create(planeta){        
+        
         return Planeta.create(planeta);        
     }
 
